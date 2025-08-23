@@ -1,0 +1,19 @@
+body{
+    background-image: url("../images/bg.jpg");
+    background-size: 1920px;
+}
+header{
+    background-color: rgba(36, 36, 36, 0.9);
+    text-align: left;
+    padding: 20px;
+    box-shadow: black 5px 5px 5px;
+    text-shadow: black 5px 5px 5px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-family: 'Roboto Regular', arial;
+    font-weight: bold;
+    font-size: 20px;
+}
+.header_box_1 > a{
+    color: aliceblue;
+}
