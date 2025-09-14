@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projekty</title>
+<title>Business Card</title>
 <link href="https://pl.getfonts.net/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="../styles/style.css">
 <script src="https://kit.fontawesome.com/f8bd058061.js" crossorigin="anonymous"></script>
@@ -27,44 +27,162 @@
 <main class="fade-up">
     <h1>Moje Projekty</h1>
     <div class="projects_grid">
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal1')">
             <h2>Projekt 1</h2>
             <p>Krótki opis projektu numer 1.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal2')">
             <h2>Projekt 2</h2>
             <p>Krótki opis projektu numer 2.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal3')">
             <h2>Projekt 3</h2>
             <p>Krótki opis projektu numer 3.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal4')">
             <h2>Projekt 4</h2>
             <p>Krótki opis projektu numer 4.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal5')">
             <h2>Projekt 5</h2>
             <p>Krótki opis projektu numer 5.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal6')">
             <h2>Projekt 6</h2>
             <p>Krótki opis projektu numer 6.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal7')">
             <h2>Projekt 7</h2>
             <p>Krótki opis projektu numer 7.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal8')">
             <h2>Projekt 8</h2>
             <p>Krótki opis projektu numer 8.</p>
         </div>
-        <div class="project_card">
+        <div class="project_card" onclick="openModal('modal9')">
             <h2>Projekt 9</h2>
             <p>Krótki opis projektu numer 9.</p>
         </div>
     </div>
 </main>
+
+<div id="modal1" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Projekt 1</h2>
+    <img src="../images/project1.jpg" alt="Projekt 1" class="modal_img">
+    <p>Szczegółowy opis projektu 1.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Projekt 2</h2>
+    <img src="../images/project2.jpg" alt="Projekt 2" class="modal_img">
+    <p>Szczegółowy opis projektu 2.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Projekt 3</h2>
+    <img src="../images/project3.jpg" alt="Projekt 3" class="modal_img">
+    <p>Szczegółowy opis projektu 3.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h2>Projekt 4</h2>
+    <img src="../images/project4.jpg" alt="Projekt 4" class="modal_img">
+    <p>Szczegółowy opis projektu 4.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <h2>Projekt 5</h2>
+    <img src="../images/project5.jpg" alt="Projekt 5" class="modal_img">
+    <p>Szczegółowy opis projektu 5.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <h2>Projekt 6</h2>
+    <img src="../images/project6.jpg" alt="Projekt 6" class="modal_img">
+    <p>Szczegółowy opis projektu 6.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal7')">&times;</span>
+    <h2>Projekt 7</h2>
+    <img src="../images/project7.jpg" alt="Projekt 7" class="modal_img">
+    <p>Szczegółowy opis projektu 7.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal8" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal8')">&times;</span>
+    <h2>Projekt 8</h2>
+    <img src="../images/project8.jpg" alt="Projekt 8" class="modal_img">
+    <p>Szczegółowy opis projektu 8.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal9" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal9')">&times;</span>
+    <h2>Projekt 9</h2>
+    <img src="../images/project9.jpg" alt="Projekt 9" class="modal_img">
+    <p>Szczegółowy opis projektu 9.</p>
+    <div class="modal_buttons">
+      <a href="#" target="_blank">Zobacz Demo</a>
+      <a href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
 
 <footer class="fade-up">
     <div class="social_media">
@@ -87,5 +205,27 @@
         <a href="#header" id="arrow_up"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
     </div>
 </footer>
+
+<script>
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add('show');
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.remove('show');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 400); // dopasowane do transition
+}
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    closeModal(event.target.id);
+  }
+}
+</script>
+
 </body>
 </html>

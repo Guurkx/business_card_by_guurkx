@@ -26,17 +26,17 @@
 
 <div class="content fade-up">
     <aside>
-        <div class="project1">
-            <h1>Top Projekt</h1>
-            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        <div class="project1" onclick="openModal('modal1')">
+            <h1>Top Projekt 1</h1>
+            <p class="comment">Kliknij, aby zobaczyć szczegóły...</p>
         </div>
-        <div class="project2">
-            <h1>Top Projekt</h1>
-            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        <div class="project2" onclick="openModal('modal2')">
+            <h1>Top Projekt 2</h1>
+            <p class="comment">Kliknij, aby zobaczyć szczegóły...</p>
         </div>
-        <div class="project3">
-            <h1>Top Projekt</h1>
-            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        <div class="project3" onclick="openModal('modal3')">
+            <h1>Top Projekt 3</h1>
+            <p class="comment">Kliknij, aby zobaczyć szczegóły...</p>
         </div>
     </aside>
 
@@ -44,6 +44,45 @@
         <h1>Imie<br>nazwisko</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
     </main>
+</div>
+
+<div id="modal1" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Projekt 1</h2>
+    <img src="content/images/project1.jpg" alt="Projekt 1" class="modal_img">
+    <p>Opis projektu 1 – możesz tu wstawić szczegóły, technologie, itp.</p>
+    <div class="modal_buttons">
+      <a href="https://demo-projekt1.com" target="_blank">Zobacz Demo</a>
+      <a href="https://github.com/twoje-repo/projekt1" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Projekt 2</h2>
+    <img src="content/images/project2.jpg" alt="Projekt 2" class="modal_img">
+    <p>Opis projektu 2 – więcej informacji, obrazki, linki.</p>
+    <div class="modal_buttons">
+      <a href="https://demo-projekt2.com" target="_blank">Zobacz Demo</a>
+      <a href="https://github.com/twoje-repo/projekt2" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal_content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Projekt 3</h2>
+    <img src="content/images/project3.jpg" alt="Projekt 3" class="modal_img">
+    <p>Opis projektu 3 – szczegóły i dodatkowe informacje.</p>
+    <div class="modal_buttons">
+      <a href="https://demo-projekt3.com" target="_blank">Zobacz Demo</a>
+      <a href="https://github.com/twoje-repo/projekt3" target="_blank">GitHub</a>
+    </div>
+  </div>
 </div>
 
 <footer class="fade-up">
@@ -67,5 +106,22 @@
         <a href="#header" id="arrow_up"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
     </div>
 </footer>
+<script>
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add('show');
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.remove('show');
+}
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    closeModal(event.target.id);
+  }
+}
+</script>
 </body>
 </html>

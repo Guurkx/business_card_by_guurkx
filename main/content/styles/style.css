@@ -89,7 +89,7 @@ aside {
     gap: 1em;
     box-shadow: rgba(0,0,0,0.7) 0 0 0 5px;
     margin-left: 0;
-    padding: 1em 1em 1em 0em;
+    padding: 1em 0em 1em 0em;
     overflow: visible;
     position: relative;
 }
@@ -100,7 +100,6 @@ aside {
     width: calc(100% - 2em);
     height: 20em;
     border-radius: 0 2em 2em 0;
-    transition: transform 0.4s;
     padding: 1em;
     box-shadow: 2px 2px 8px black;
     position: relative;
@@ -109,7 +108,6 @@ aside {
 
 .project1:hover, .project2:hover, .project3:hover {
     background-color: black;
-    transition: 0.4s;
     transform: translateX(10px) scale(1.05);
     z-index: 1;
 }
@@ -126,9 +124,8 @@ main {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: rgba(36, 36, 36, 0.98);
     padding: 20px 40px;
+    background-color: rgba(36, 36, 36, 0.98);
     text-align: center;
     box-shadow: rgba(0,0,0,0.7) 0 0 0 5px;
     margin-top: 2em;
@@ -143,11 +140,9 @@ footer a{
 }
 .creator{
     display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 #arrow_up{
     background-color: rgb(22, 22, 22);
@@ -172,7 +167,6 @@ footer a{
     height: 20px;
     background-color: aliceblue;
     margin-right: 5px;
-    padding: 2px;
 }
 
 .projects_grid {
@@ -196,112 +190,105 @@ footer a{
     transform: translateY(-5px) scale(1.03);
 }
 
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal_content {
+    background-color: rgba(36,36,36,0.98);
+    padding: 20px;
+    border-radius: 1em;
+    width: 90%;
+    max-width: 600px;
+    color: aliceblue;
+    box-shadow: 0 0 15px black;
+    text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+}
+
+.modal.show .modal_content {
+    transform: scale(1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+
+.modal_buttons a {
+    background-color: rgb(22, 22, 22);
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 1em;
+    box-shadow: 2px 2px 5px black;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.modal_buttons a:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        padding: 10px 20px;
-        text-align: center;
-    }
-
-    .header_box_1 p {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-
-    .header_box_2 {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .header_box_2 a {
-        width: 90%;
-        height: auto;
-        padding: 10px;
-        font-size: 1em;
-        border-radius: 1em;
-        text-align: center;
-    }
-
-    .header_box_2 .line {
-        display: none;
-    }
-
-    .content {
-        flex-direction: column;
-        gap: 1em;
-        padding: 0 10px;
-        align-items: center;
-        width: 100%;
-    }
-
-    aside, main {
-        width: 95%;
-        border-radius: 1em;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 0.95em;
-    }
-
-    .project1, .project2, .project3 {
-        width: 100%;
-        border-radius: 1em;
-        height: auto;
-    }
-
-    .projects_grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 1em;
-        padding: 20px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .creator {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    #arrow_up {
-        margin-top: 10px;
-    }
+    header { flex-direction: column; align-items: center; height: auto; padding: 10px 20px; text-align: center; }
+    .header_box_1 p { font-size: 1.5em; margin-bottom: 10px; }
+    .header_box_2 { flex-direction: column; width: 100%; gap: 10px; align-items: center; }
+    .header_box_2 a { width: 90%; height: auto; padding: 10px; font-size: 1em; border-radius: 1em; text-align: center; }
+    .header_box_2 .line { display: none; }
+    .content { flex-direction: column; gap: 1em; padding: 0 10px; align-items: center; width: 100%; }
+    aside, main { width: 95%; border-radius: 1em; margin: 0 auto; text-align: center; font-size: 0.95em; }
+    .project1, .project2, .project3 { width: 100%; border-radius: 1em; height: auto; }
+    .projects_grid { grid-template-columns: repeat(2, 1fr); }
+    footer { flex-direction: column; gap: 1em; padding: 20px; text-align: center; align-items: center; }
+    .creator { flex-direction: column; gap: 10px; align-items: center; }
+    #arrow_up { margin-top: 10px; }
 }
 
 @media (max-width: 480px) {
-    .header_box_1 p {
-        font-size: 1.2em;
-    }
-    main, aside {
-        font-size: 0.9em;
-    }
-    .projects_grid {
-        grid-template-columns: 1fr;
-    }
+    .header_box_1 p { font-size: 1.2em; }
+    main, aside { font-size: 0.9em; }
+    .projects_grid { grid-template-columns: 1fr; }
 }
 
-
-.fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease-out forwards;
-    will-change: transform, opacity;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+.fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s ease-out forwards; will-change: transform, opacity; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 aside.fade-up { animation-delay: 0.2s; }
 main.fade-up { animation-delay: 0.4s; }
 footer.fade-up { animation-delay: 0.6s; }
